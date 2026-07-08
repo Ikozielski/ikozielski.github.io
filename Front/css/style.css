@@ -4,7 +4,7 @@
    porque cada categoria (Plataforma, Puzzle, Unity) tem uma cor de destaque fixa. */
 .card-cover[data-categoria="plataforma"] { background-color: #10b981; }
 .card-cover[data-categoria="puzzle"]    { background-color: #8b5cf6; }
-.card-cover[data-categoria="unity"]     { background-color: #f59e0b; }
+.card-cover[data-categoria="unity"]     { background-color: #b45309; }
 
 /* Estado ativo do botão de filtro em Projetos */
 .filtro-btn.ativo {

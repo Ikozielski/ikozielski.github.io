@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iury Kozielski</title>
+  <link rel="icon" type="image/png" href="assets/fotoPerfil-canalCS-semfundo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -11,13 +12,15 @@
 <body class="bg-slate-950 text-slate-100 min-h-screen">
 
   <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-    <a href="index.html" class="text-lg font-semibold">Iury Kozielski</a>
+    <a href="index.html" class="flex items-center gap-2 text-lg font-semibold">
+      <img src="assets/fotoPerfil-canalCS-semfundo.png" alt="" class="w-8 h-8 object-contain" />
+      Iury Kozielski
+    </a>
     <nav class="hidden md:flex gap-6 text-sm text-slate-300">
       <a href="index.html" class="text-white">Início</a>
       <a href="projetos.html" class="hover:text-white transition">Projetos</a>
       <a href="canal-cs2.html" class="hover:text-white transition">Canal CS2</a>
       <a href="canal-pessoal.html" class="hover:text-white transition">Canal Pessoal</a>
-      <a href="sobre.html" class="hover:text-white transition">Sobre mim</a>
     </nav>
     <button type="button" id="btn-menu-mobile" class="md:hidden w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition" title="Menu" aria-label="Abrir menu" aria-expanded="false">
       <i class="ti ti-menu-2"></i>
@@ -30,7 +33,6 @@
     <a href="projetos.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Projetos</a>
     <a href="canal-cs2.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Canal CS2</a>
     <a href="canal-pessoal.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Canal Pessoal</a>
-    <a href="sobre.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Sobre mim</a>
   </nav>
 
   <main class="max-w-6xl mx-auto px-6 pb-16">
@@ -43,7 +45,7 @@
           <img
             src="assets/fotoPerfil-inicio.png"
             alt="Foto de perfil do Iury Kozielski"
-            class="w-24 h-24 rounded-full object-cover"
+            class="w-24 h-24 rounded-full object-cover object-top"
           />
           <div>
             <h1 class="text-xl font-semibold">Iury Kozielski</h1>
@@ -53,20 +55,23 @@
           </div>
 
           <div class="flex flex-wrap justify-center gap-2">
-            <span class="px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-200">GameMaker</span>
-            <span class="px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-200">C#</span>
-            <span class="px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-200">Unity</span>
+            <span class="px-3 py-1 rounded-full text-xs bg-[#7C3AED]/10 text-[#a78bfa] border border-[#7C3AED]/30">GameMaker</span>
+            <span class="px-3 py-1 rounded-full text-xs bg-[#178600]/10 text-[#4ade80] border border-[#178600]/30">C#</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white border border-white/50">Unity</span>
           </div>
 
           <div class="flex flex-wrap justify-center gap-2 pt-2">
-            <a href="https://wa.me/5544498643755" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition" title="WhatsApp">
+            <a href="https://wa.me/5544498643755" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/30 hover:bg-[#25D366]/20 flex items-center justify-center transition" title="WhatsApp">
               <i class="ti ti-brand-whatsapp"></i>
             </a>
-            <button type="button" id="btn-email" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition" title="Email">
+            <button type="button" id="btn-email" class="w-9 h-9 rounded-full bg-[#EA4335]/10 text-[#EA4335] border border-[#EA4335]/30 hover:bg-[#EA4335]/20 flex items-center justify-center transition" title="Email">
               <i class="ti ti-mail"></i>
             </button>
-            <a href="https://www.linkedin.com/in/iury-kozielski" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/iury-kozielski" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-[#0A66C2]/10 text-[#0A66C2] border border-[#0A66C2]/30 hover:bg-[#0A66C2]/20 flex items-center justify-center transition" title="LinkedIn">
               <i class="ti ti-brand-linkedin"></i>
+            </a>
+            <a href="https://github.com/Ikozielski" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 text-white border border-white/30 hover:bg-white/20 flex items-center justify-center transition" title="GitHub">
+              <i class="ti ti-brand-github"></i>
             </a>
           </div>
         </div>
@@ -77,65 +82,72 @@
         <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4">Destaques</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-          <!-- TODO: substituir pelos projetos/canais reais em destaque -->
-          <a href="projetos.html" class="rounded-xl border border-slate-800 p-5 hover:border-slate-600 transition space-y-2">
-            <i class="ti ti-device-gamepad-2 text-2xl text-emerald-400"></i>
-            <h3 class="font-medium">Jogo em destaque</h3>
-            <p class="text-sm text-slate-400">Plataforma · GML</p>
+          <a href="https://ytb-iurykzk.itch.io/paintfall" target="_blank" rel="noopener" class="rounded-xl border border-slate-800 overflow-hidden hover:border-slate-600 transition">
+            <img src="assets/paintfall.png" alt="Capa do jogo PaintFall" class="w-full h-16 object-cover object-top" />
+            <div class="p-5 flex items-center justify-center gap-4">
+              <i class="ti ti-device-gamepad-2 text-2xl text-emerald-400"></i>
+              <div>
+                <h3 class="font-medium">PaintFall</h3>
+                <p class="text-sm text-slate-400">GameMaker</p>
+              </div>
+              <i class="ti ti-external-link text-slate-500"></i>
+            </div>
           </a>
 
-          <a href="projetos.html" class="rounded-xl border border-slate-800 p-5 hover:border-slate-600 transition space-y-2">
-            <i class="ti ti-cube text-2xl text-amber-400"></i>
-            <h3 class="font-medium">Projeto Unity em andamento</h3>
-            <p class="text-sm text-slate-400">Unity · C#</p>
+          <a href="projetos.html" class="rounded-xl border border-slate-800 overflow-hidden hover:border-slate-600 transition">
+            <div class="card-cover h-16 flex items-center justify-center" data-categoria="unity">
+              <i class="ti ti-cube text-3xl text-white"></i>
+            </div>
+            <div class="p-5 flex items-center justify-center gap-4">
+              <i class="ti ti-device-gamepad-2 text-2xl text-emerald-400"></i>
+              <div>
+                <h3 class="font-medium">Projetos</h3>
+                <p class="text-sm text-slate-400">GameMaker · C# · Unity</p>
+              </div>
+              <i class="ti ti-chevron-right text-slate-500"></i>
+            </div>
           </a>
 
-          <a href="canal-cs2.html" class="rounded-xl border border-slate-800 p-5 hover:border-slate-600 transition space-y-2">
+          <a href="canal-cs2.html" class="rounded-xl border border-slate-800 p-5 hover:border-slate-600 transition flex items-center justify-center gap-4">
+            <img src="assets/fotoPerfil-canalCS.png" alt="Logo do Canal IuryKzK" class="w-16 h-16 rounded-lg object-cover shrink-0" />
+            <div>
+              <h3 class="font-medium">Canal IuryKzK</h3>
+              <p class="text-sm text-slate-400">CS2 · YouTube</p>
+            </div>
             <i class="ti ti-brand-youtube text-2xl text-red-400"></i>
-            <h3 class="font-medium">Canal CS2</h3>
-            <p class="text-sm text-slate-400">YouTube</p>
           </a>
 
-          <a href="canal-pessoal.html" class="rounded-xl border border-slate-800 p-5 hover:border-slate-600 transition space-y-2">
+          <a href="canal-pessoal.html" class="rounded-xl border border-slate-800 p-5 hover:border-slate-600 transition flex items-center justify-center gap-4">
+            <img src="assets/fotoPerfil-CanalPessoal.jpeg" alt="Logo do Canal Pessoal" class="w-16 h-16 rounded-lg object-cover shrink-0" />
+            <div>
+              <h3 class="font-medium">Canal Pessoal</h3>
+              <p class="text-sm text-slate-400">YouTube</p>
+            </div>
             <i class="ti ti-brand-youtube text-2xl text-red-400"></i>
-            <h3 class="font-medium">Canal Pessoal</h3>
-            <p class="text-sm text-slate-400">YouTube</p>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Navegação secundária -->
-    <section class="py-8">
-      <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4">Explorar</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <a href="sobre.html" class="rounded-xl border border-slate-800 p-4 hover:border-slate-600 transition flex flex-col items-center gap-2 text-center">
-          <i class="ti ti-user text-xl"></i>
-          <span class="text-sm">Sobre mim</span>
-        </a>
-        <a href="projetos.html" class="rounded-xl border border-slate-800 p-4 hover:border-slate-600 transition flex flex-col items-center gap-2 text-center">
-          <i class="ti ti-device-gamepad-2 text-xl"></i>
-          <span class="text-sm">Projetos</span>
-        </a>
-        <a href="canal-cs2.html" class="rounded-xl border border-slate-800 p-4 hover:border-slate-600 transition flex flex-col items-center gap-2 text-center">
-          <i class="ti ti-brand-youtube text-xl"></i>
-          <span class="text-sm">Canal CS2</span>
-        </a>
-        <a href="canal-pessoal.html" class="rounded-xl border border-slate-800 p-4 hover:border-slate-600 transition flex flex-col items-center gap-2 text-center">
-          <i class="ti ti-brand-youtube text-xl"></i>
-          <span class="text-sm">Canal Pessoal</span>
-        </a>
+    <!-- Sobre mim + ranking de linguagens (reaproveitado do README do GitHub) -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
+      <div class="md:col-span-2">
+        <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4">Sobre mim</h2>
+        <div class="rounded-2xl border border-slate-800 p-6 min-h-[280px]">
+          <!-- TODO: conteúdo do Sobre mim vai aqui -->
+          <p class="text-slate-400 text-sm">Conteúdo em construção.</p>
+        </div>
       </div>
-    </section>
 
-    <!-- Ranking de linguagens (reaproveitado do README do GitHub) -->
-    <section class="py-8">
-      <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4">Tecnologias mais Usadas</h2>
-      <div class="rounded-2xl border border-slate-800 p-6 inline-block">
-        <img
-          src="https://github-readme-stats-ten-flax-46.vercel.app/api/top-langs/?username=ikozielski&layout=donut-vertical&langs_count=8&theme=dark&count_private=true&hide_border=true&v=2"
-          alt="Ranking de linguagens mais usadas nos repositórios do Iury"
-        />
+      <div class="md:col-span-1">
+        <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4">Tecnologias mais Usadas</h2>
+        <div class="rounded-2xl border border-slate-800 p-6">
+          <img
+            src="https://github-readme-stats-ten-flax-46.vercel.app/api/top-langs/?username=ikozielski&layout=donut-vertical&langs_count=8&theme=dark&count_private=true&hide_border=true&v=2"
+            alt="Ranking de linguagens mais usadas nos repositórios do Iury"
+            class="w-full"
+          />
+        </div>
       </div>
     </section>
 
