@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos · Iury Kozielski</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
+  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <a href="index.html" class="text-lg font-semibold">Iury Kozielski</a>
+    <nav class="flex gap-6 text-sm text-slate-300">
+      <a href="index.html" class="hover:text-white transition">Início</a>
+      <a href="sobre.html" class="hover:text-white transition">Sobre mim</a>
+      <a href="projetos.html" class="text-white">Projetos</a>
+      <a href="canal-cs2.html" class="hover:text-white transition">Canal CS2</a>
+      <a href="canal-pessoal.html" class="hover:text-white transition">Canal Pessoal</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 pb-16">
+    <h1 class="text-2xl font-semibold mb-6">Projetos</h1>
+
+    <!-- Filtro por categoria -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      <button data-filtro="todos" class="filtro-btn ativo px-4 py-1.5 rounded-full text-sm border border-slate-700 transition">Todos</button>
+      <button data-filtro="plataforma" class="filtro-btn px-4 py-1.5 rounded-full text-sm border border-slate-700 transition">Plataforma</button>
+      <button data-filtro="puzzle" class="filtro-btn px-4 py-1.5 rounded-full text-sm border border-slate-700 transition">Puzzle</button>
+      <button data-filtro="unity" class="filtro-btn px-4 py-1.5 rounded-full text-sm border border-slate-700 transition">Unity</button>
+    </div>
+
+    <!-- Grid de cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- TODO: trocar pelos projetos reais (nome, engine, link do itch.io) -->
+      <a href="#" data-card-categoria="plataforma" class="rounded-xl border border-slate-800 overflow-hidden hover:border-slate-600 transition">
+        <div class="card-cover h-[70px] flex items-center justify-center" data-categoria="plataforma">
+          <i class="ti ti-device-gamepad-2 text-2xl text-white"></i>
+        </div>
+        <div class="p-4 space-y-1">
+          <h3 class="font-medium">Nome do projeto</h3>
+          <p class="text-sm text-slate-400">Plataforma · GML</p>
+          <span class="inline-flex items-center gap-1 text-sm text-slate-500">Em breve</span>
+        </div>
+      </a>
+
+      <a href="#" data-card-categoria="puzzle" class="rounded-xl border border-slate-800 overflow-hidden hover:border-slate-600 transition">
+        <div class="card-cover h-[70px] flex items-center justify-center" data-categoria="puzzle">
+          <i class="ti ti-puzzle text-2xl text-white"></i>
+        </div>
+        <div class="p-4 space-y-1">
+          <h3 class="font-medium">Nome do projeto</h3>
+          <p class="text-sm text-slate-400">Puzzle · GML</p>
+          <span class="inline-flex items-center gap-1 text-sm text-slate-500">Em breve</span>
+        </div>
+      </a>
+
+      <a href="#" data-card-categoria="unity" class="rounded-xl border border-slate-800 overflow-hidden hover:border-slate-600 transition">
+        <div class="card-cover h-[70px] flex items-center justify-center" data-categoria="unity">
+          <i class="ti ti-cube text-2xl text-white"></i>
+        </div>
+        <div class="p-4 space-y-1">
+          <h3 class="font-medium">Nome do projeto</h3>
+          <p class="text-sm text-slate-400">Unity · C#</p>
+          <span class="inline-flex items-center gap-1 text-sm text-slate-500">Em breve</span>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

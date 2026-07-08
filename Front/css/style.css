@@ -1,0 +1,53 @@
+/* Estilos que não dá pra fazer só com classes utilitárias do Tailwind */
+
+/* Bloco de capa dos cards de projeto: a cor muda por categoria via data-attribute,
+   porque cada categoria (Plataforma, Puzzle, Unity) tem uma cor de destaque fixa. */
+.card-cover[data-categoria="plataforma"] { background-color: #10b981; }
+.card-cover[data-categoria="puzzle"]    { background-color: #8b5cf6; }
+.card-cover[data-categoria="unity"]     { background-color: #f59e0b; }
+
+/* Estado ativo do botão de filtro em Projetos */
+.filtro-btn.ativo {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Contador "SubTrack" (Canal CS2) — inspirado no StatTrak do CS, contando
+   inscritos em vez de kills. Fonte monoespaçada e brilho laranja pra manter
+   a referência. */
+.subtrack-container {
+  background-color: #0b0b0d;
+  border: 1px solid rgba(255, 128, 0, 0.35);
+  border-radius: 12px;
+  box-shadow: 0 0 24px rgba(255, 145, 0, 0.15), inset 0 0 20px rgba(255, 145, 0, 0.05);
+}
+
+.subtrack-digits {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 44px;
+  letter-spacing: 8px;
+  color: #ff8000;
+  text-shadow: 0 0 8px rgba(255, 128, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.5);
+}
+
+.subtrack-label {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.subtrack-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #ff8000;
+  box-shadow: 0 0 6px rgba(255, 128, 0, 0.9);
+  animation: subtrack-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes subtrack-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}

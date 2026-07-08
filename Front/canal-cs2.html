@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canal CS2 · Iury Kozielski</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
+  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <a href="index.html" class="text-lg font-semibold">Iury Kozielski</a>
+    <nav class="flex gap-6 text-sm text-slate-300">
+      <a href="index.html" class="hover:text-white transition">Início</a>
+      <a href="sobre.html" class="hover:text-white transition">Sobre mim</a>
+      <a href="projetos.html" class="hover:text-white transition">Projetos</a>
+      <a href="canal-cs2.html" class="text-white">Canal CS2</a>
+      <a href="canal-pessoal.html" class="hover:text-white transition">Canal Pessoal</a>
+    </nav>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 pb-16 space-y-6">
+    <h1 class="text-2xl font-semibold">Canal CS2</h1>
+    <!-- TODO: descrição real do canal -->
+    <p class="text-slate-300 leading-relaxed">Conteúdo em construção.</p>
+
+    <div class="flex flex-wrap gap-3">
+      <!-- TODO: trocar pelos links reais -->
+      <a href="#" class="px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/30 hover:bg-red-500/20 transition inline-flex items-center gap-2">
+        <i class="ti ti-brand-youtube"></i> Inscrever-se no YouTube
+      </a>
+      <a href="#" class="px-4 py-2 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-500/20 transition inline-flex items-center gap-2">
+        <i class="ti ti-brand-discord"></i> Entrar no Discord
+      </a>
+    </div>
+
+    <div class="subtrack-container inline-flex flex-col items-center gap-2 px-8 py-6">
+      <div class="subtrack-digits" id="contador-subtrack">000000</div>
+      <div class="subtrack-label flex items-center gap-2">
+        <span class="subtrack-dot"></span>
+        SubTrack&trade; · Inscritos no canal
+      </div>
+    </div>
+  </main>
+
+  <script src="js/subtrack.js"></script>
+</body>
+</html>
