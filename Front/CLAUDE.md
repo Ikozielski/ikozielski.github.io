@@ -34,6 +34,10 @@ prioridade agora).
   porque o site é majoritariamente estático. Se um dia migrar para React,
   a estrutura de conteúdo, Tailwind e a lógica do backend continuam
   reaproveitáveis — só a camada de apresentação mudaria.
+- **O site precisa ser responsivo** (mobile, tablet, desktop). Usar as
+  classes responsivas do Tailwind (`sm:`, `md:`, `lg:`) em qualquer layout
+  novo — grids, colunas, navegação — e testar em pelo menos uma largura
+  mobile (~375px) antes de considerar a página pronta.
 
 ## Estrutura de pastas (mono-repo com frontend e backend separados)
 
@@ -61,7 +65,7 @@ Importante: os commits são feitos a partir da raiz do repositório
 ## Navegação principal
 
 ```
-Início | Sobre mim | Projetos | Canal CS2 | Canal Pessoal
+Início | Projetos | Canal CS2 | Canal Pessoal | Sobre mim
 ```
 
 Canal CS2 e Canal Pessoal são dois canais do YouTube **diferentes** — cada

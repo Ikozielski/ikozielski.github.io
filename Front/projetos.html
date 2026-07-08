@@ -12,14 +12,26 @@
 
   <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
     <a href="index.html" class="text-lg font-semibold">Iury Kozielski</a>
-    <nav class="flex gap-6 text-sm text-slate-300">
+    <nav class="hidden md:flex gap-6 text-sm text-slate-300">
       <a href="index.html" class="hover:text-white transition">Início</a>
-      <a href="sobre.html" class="hover:text-white transition">Sobre mim</a>
       <a href="projetos.html" class="text-white">Projetos</a>
       <a href="canal-cs2.html" class="hover:text-white transition">Canal CS2</a>
       <a href="canal-pessoal.html" class="hover:text-white transition">Canal Pessoal</a>
+      <a href="sobre.html" class="hover:text-white transition">Sobre mim</a>
     </nav>
+    <button type="button" id="btn-menu-mobile" class="md:hidden w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition" title="Menu" aria-label="Abrir menu" aria-expanded="false">
+      <i class="ti ti-menu-2"></i>
+    </button>
   </header>
+
+  <!-- Menu mobile: vira dropdown abaixo do header quando a nav horizontal some (< md) -->
+  <nav id="menu-mobile" class="hidden md:hidden max-w-6xl mx-auto px-6 pb-4 flex flex-col gap-1 text-sm text-slate-300">
+    <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Início</a>
+    <a href="projetos.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 text-white transition">Projetos</a>
+    <a href="canal-cs2.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Canal CS2</a>
+    <a href="canal-pessoal.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Canal Pessoal</a>
+    <a href="sobre.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Sobre mim</a>
+  </nav>
 
   <main class="max-w-6xl mx-auto px-6 pb-16">
     <h1 class="text-2xl font-semibold mb-6">Projetos</h1>

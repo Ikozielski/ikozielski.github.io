@@ -12,14 +12,26 @@
 
   <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
     <a href="index.html" class="text-lg font-semibold">Iury Kozielski</a>
-    <nav class="flex gap-6 text-sm text-slate-300">
+    <nav class="hidden md:flex gap-6 text-sm text-slate-300">
       <a href="index.html" class="text-white">Início</a>
-      <a href="sobre.html" class="hover:text-white transition">Sobre mim</a>
       <a href="projetos.html" class="hover:text-white transition">Projetos</a>
       <a href="canal-cs2.html" class="hover:text-white transition">Canal CS2</a>
       <a href="canal-pessoal.html" class="hover:text-white transition">Canal Pessoal</a>
+      <a href="sobre.html" class="hover:text-white transition">Sobre mim</a>
     </nav>
+    <button type="button" id="btn-menu-mobile" class="md:hidden w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition" title="Menu" aria-label="Abrir menu" aria-expanded="false">
+      <i class="ti ti-menu-2"></i>
+    </button>
   </header>
+
+  <!-- Menu mobile: vira dropdown abaixo do header quando a nav horizontal some (< md) -->
+  <nav id="menu-mobile" class="hidden md:hidden max-w-6xl mx-auto px-6 pb-4 flex flex-col gap-1 text-sm text-slate-300">
+    <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 text-white transition">Início</a>
+    <a href="projetos.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Projetos</a>
+    <a href="canal-cs2.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Canal CS2</a>
+    <a href="canal-pessoal.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Canal Pessoal</a>
+    <a href="sobre.html" class="px-3 py-2 rounded-lg hover:bg-slate-900 transition">Sobre mim</a>
+  </nav>
 
   <main class="max-w-6xl mx-auto px-6 pb-16">
 
@@ -27,31 +39,32 @@
 
       <!-- Coluna esquerda: perfil -->
       <div class="md:col-span-1 space-y-6">
-        <div class="rounded-2xl border border-slate-800 p-6 space-y-4">
-          <!-- TODO: trocar pelo círculo por uma foto real em assets/ quando tiver uma -->
-          <div class="w-24 h-24 rounded-full bg-slate-800 flex items-center justify-center text-3xl">
-            IK
-          </div>
+        <div class="rounded-2xl border border-slate-800 p-6 space-y-4 flex flex-col items-center text-center">
+          <img
+            src="assets/fotoPerfil-inicio.png"
+            alt="Foto de perfil do Iury Kozielski"
+            class="w-24 h-24 rounded-full object-cover"
+          />
           <div>
             <h1 class="text-xl font-semibold">Iury Kozielski</h1>
-            <p class="text-slate-400 text-sm flex items-center gap-1">
+            <p class="text-slate-400 text-sm flex items-center justify-center gap-1">
               <i class="ti ti-map-pin"></i> Floresta, PR
             </p>
           </div>
 
-          <div class="flex flex-wrap gap-2">
+          <div class="flex flex-wrap justify-center gap-2">
             <span class="px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-200">GameMaker</span>
             <span class="px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-200">C#</span>
             <span class="px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-200">Unity</span>
           </div>
 
-          <div class="flex flex-wrap gap-2 pt-2">
+          <div class="flex flex-wrap justify-center gap-2 pt-2">
             <a href="https://wa.me/5544498643755" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition" title="WhatsApp">
               <i class="ti ti-brand-whatsapp"></i>
             </a>
-            <a href="mailto:contato.iurykozielski@gmail.com" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition" title="Email">
+            <button type="button" id="btn-email" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition" title="Email">
               <i class="ti ti-mail"></i>
-            </a>
+            </button>
             <a href="https://www.linkedin.com/in/iury-kozielski" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition" title="LinkedIn">
               <i class="ti ti-brand-linkedin"></i>
             </a>
@@ -117,15 +130,37 @@
 
     <!-- Ranking de linguagens (reaproveitado do README do GitHub) -->
     <section class="py-8">
-      <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4">Tecnologias usadas</h2>
-      <!-- TODO: confirmar o username do GitHub e trocar count_private se necessário -->
-      <img
-        src="https://github-readme-stats.vercel.app/api/top-langs/?username=ikozielski&layout=compact&theme=dark&hide_border=true"
-        alt="Ranking de linguagens mais usadas nos repositórios do Iury"
-        class="rounded-xl"
-      />
+      <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4">Tecnologias mais Usadas</h2>
+      <div class="rounded-2xl border border-slate-800 p-6 inline-block">
+        <img
+          src="https://github-readme-stats-ten-flax-46.vercel.app/api/top-langs/?username=ikozielski&layout=donut-vertical&langs_count=8&theme=dark&count_private=true&hide_border=true&v=2"
+          alt="Ranking de linguagens mais usadas nos repositórios do Iury"
+        />
+      </div>
     </section>
 
   </main>
+
+  <!-- Popup do email: mostra o endereço destacado com opção de copiar ou abrir no Gmail -->
+  <div id="modal-email" class="hidden fixed inset-0 z-50 flex items-center justify-center px-4">
+    <div class="absolute inset-0 bg-black/60" data-modal-fechar></div>
+    <div class="relative bg-slate-900 border border-slate-800 rounded-2xl p-6 max-w-sm w-full space-y-4 text-center">
+      <button type="button" data-modal-fechar class="absolute top-3 right-3 text-slate-500 hover:text-slate-300 transition" title="Fechar" aria-label="Fechar">
+        <i class="ti ti-x"></i>
+      </button>
+      <h3 class="text-sm uppercase tracking-wide text-slate-400">Meu email</h3>
+      <p id="texto-email" class="text-lg font-semibold text-emerald-400 break-all">contato.iurykozielski@gmail.com</p>
+      <div class="flex flex-col sm:flex-row gap-2 justify-center">
+        <button type="button" id="btn-copiar-email" class="px-4 py-2 rounded-full bg-slate-800 hover:bg-slate-700 transition text-sm inline-flex items-center justify-center gap-2">
+          <i class="ti ti-copy"></i> Copiar email
+        </button>
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contato.iurykozielski@gmail.com" target="_blank" rel="noopener" class="px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 transition text-sm inline-flex items-center justify-center gap-2">
+          <i class="ti ti-mail"></i> Abrir no Gmail
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
