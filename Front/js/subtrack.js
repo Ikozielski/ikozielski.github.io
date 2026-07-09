@@ -89,10 +89,10 @@ async function renderizarUltimosVideos(uploadsPlaylistId, elVideos) {
       );
       const dadosVideos = await respostaVideos.json();
 
-      // Shorts costumam ter até 60s — filtra eles fora pra sobrar só vídeo longo, já em
-      // ordem de upload (mais recente primeiro).
+      // O YouTube já permite Shorts de até 3 minutos, então um corte em 60s deixa
+      // passar vídeo curto disfarçado de "longo" — usa 180s pra filtrar de verdade.
       for (const video of dadosVideos.items) {
-        if (converterDuracaoParaSegundos(video.contentDetails.duration) > 60) {
+        if (converterDuracaoParaSegundos(video.contentDetails.duration) > 180) {
           videosLongos.push(video);
         }
       }
