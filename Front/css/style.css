@@ -58,11 +58,24 @@ body::after {
   }
 }
 
+/* Título principal das páginas (Projetos, Canal CS2, Canal Pessoal): fonte de
+   destaque (arcade/futurista) com degradê nas mesmas cores do fundo aurora,
+   pra sair do "Arial puro" do resto do texto. */
+.titulo-pagina {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, #34d399, #a78bfa, #fb923c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* Bloco de capa dos cards de projeto: a cor muda por categoria via data-attribute,
-   porque cada categoria (Plataforma, Puzzle, Unity) tem uma cor de destaque fixa. */
-.card-cover[data-categoria="plataforma"] { background-color: #10b981; }
-.card-cover[data-categoria="puzzle"]    { background-color: #8b5cf6; }
+   porque cada categoria (Unity, Game Maker, GameJam) tem uma cor de destaque fixa.
+   O roxo do Game Maker é o mesmo do badge "GameMaker" no card de perfil. */
+.card-cover[data-categoria="gamemaker"] { background-color: #7C3AED; }
 .card-cover[data-categoria="unity"]     { background-color: #b45309; }
+.card-cover[data-categoria="gamejam"]   { background-color: #0891b2; }
 
 /* Estado ativo do botão de filtro em Projetos */
 .filtro-btn.ativo {
