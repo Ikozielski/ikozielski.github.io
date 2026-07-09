@@ -133,15 +133,46 @@
     <section class="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
       <div class="md:col-span-2">
         <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4">Sobre mim</h2>
-        <div class="rounded-2xl border border-slate-800 p-6 min-h-[280px]">
-          <!-- TODO: conteúdo do Sobre mim vai aqui -->
-          <p class="text-slate-400 text-sm">Conteúdo em construção.</p>
+        <div class="rounded-2xl border border-slate-800 p-8 text-slate-300 text-sm leading-relaxed h-full flex flex-col justify-start gap-8">
+          <div class="space-y-4">
+            <p>
+              Oi, eu sou o Iury! Tenho 26 anos, sou Engenheiro de Software e hoje
+              dedico boa parte do meu tempo criando jogos com GameMaker e Unity.
+            </p>
+            <p>
+              Também mantenho dois cantinhos no YouTube — um de CS2 e outro
+              sobre tecnologia, que aos poucos quero transformar em devlog dos
+              meus projetos.
+            </p>
+          </div>
+
+          <!-- Stack backend/frontend: mesmo estilo de badge colorido usado no card de perfil -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="rounded-xl border border-slate-800 p-6">
+              <h3 class="text-sm uppercase tracking-wide text-slate-400 mb-4 text-center">Back-end</h3>
+              <div class="flex flex-wrap justify-center gap-2">
+                <span class="px-3 py-1 rounded-full text-xs bg-[#ED8B00]/10 text-amber-300 border border-[#ED8B00]/30">Java</span>
+                <span class="px-3 py-1 rounded-full text-xs bg-[#6DB33F]/10 text-lime-300 border border-[#6DB33F]/30">Spring Boot</span>
+                <span class="px-3 py-1 rounded-full text-xs bg-[#178600]/10 text-emerald-400 border border-[#178600]/30">C#</span>
+                <span class="px-3 py-1 rounded-full text-xs bg-[#336791]/10 text-sky-300 border border-[#336791]/30">PostgreSQL</span>
+                <span class="px-3 py-1 rounded-full text-xs bg-[#FF6C37]/10 text-orange-300 border border-[#FF6C37]/30">Postman</span>
+              </div>
+            </div>
+
+            <div class="rounded-xl border border-slate-800 p-6">
+              <h3 class="text-sm uppercase tracking-wide text-slate-400 mb-4 text-center">Front-end</h3>
+              <div class="flex flex-wrap justify-center gap-2">
+                <span class="px-3 py-1 rounded-full text-xs bg-[#F7DF1E]/10 text-yellow-300 border border-[#F7DF1E]/30">JavaScript</span>
+                <span class="px-3 py-1 rounded-full text-xs bg-[#38BDF8]/10 text-cyan-300 border border-[#38BDF8]/30">Tailwind CSS</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="md:col-span-1">
         <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4">Tecnologias mais Usadas</h2>
-        <div class="rounded-2xl border border-slate-800 p-6">
+        <div class="rounded-2xl border border-slate-800 p-6 h-full">
           <img
             src="https://github-readme-stats-ten-flax-46.vercel.app/api/top-langs/?username=ikozielski&layout=donut-vertical&langs_count=8&theme=dark&count_private=true&hide_border=true&v=2"
             alt="Ranking de linguagens mais usadas nos repositórios do Iury"
