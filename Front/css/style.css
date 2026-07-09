@@ -29,12 +29,12 @@ body::after {
 body::before {
   background-image:
     radial-gradient(circle at 20% 25%, rgba(16, 185, 129, 0.20), transparent 38%),
-    radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.22), transparent 38%);
+    radial-gradient(circle at 80% 20%, rgba(255, 128, 0, 0.22), transparent 38%);
   animation: aurora-drift-1 7s ease-in-out infinite alternate;
 }
 
 body::after {
-  background-image: radial-gradient(circle at 50% 85%, rgba(255, 128, 0, 0.16), transparent 42%);
+  background-image: radial-gradient(circle at 50% 85%, rgba(124, 58, 237, 0.16), transparent 42%);
   animation: aurora-drift-2 9s ease-in-out infinite alternate;
 }
 
