@@ -35,19 +35,41 @@
     <a href="canal-pessoal.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-900 text-white transition"><i class="ti ti-video text-emerald-400"></i>Canal Pessoal</a>
   </nav>
 
-  <main class="max-w-3xl mx-auto px-6 pb-16 space-y-6">
+  <main class="max-w-6xl mx-auto px-6 pb-16 space-y-6">
     <h1 class="text-3xl sm:text-4xl mb-2 flex items-center justify-center gap-3">
       <i class="ti ti-brand-youtube text-red-400"></i>
       <span class="titulo-pagina">Iury Kozielski</span>
     </h1>
-    <!-- TODO: descrição real do canal -->
-    <p class="text-slate-300 leading-relaxed">Conteúdo em construção.</p>
 
-    <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/30 hover:bg-red-500/20 transition">
-      <i class="ti ti-brand-youtube"></i> Inscrever-se no YouTube
-    </a>
+    <!-- Perfil do canal: logo/nome/inscritos/visualizações totais -->
+    <div class="flex items-center gap-4">
+      <img src="assets/fotoPerfil-CanalPessoal.jpeg" alt="Logo do canal Iury Kozielski" class="w-16 h-16 rounded-xl object-cover shrink-0" />
+      <div>
+        <h2 class="text-lg font-semibold">Iury Kozielski</h2>
+        <p class="text-slate-400 text-sm" id="pessoal-inscritos">Carregando inscritos…</p>
+        <p class="text-slate-400 text-sm" id="pessoal-total-views">Carregando visualizações…</p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3">
+      <a href="https://www.youtube.com/channel/UCfFUdzX28aYWB5JNzh2PHMA?sub_confirmation=1" target="_blank" rel="noopener" class="px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/30 hover:bg-red-500/20 transition inline-flex items-center gap-2">
+        <i class="ti ti-brand-youtube"></i> Inscrever-se no YouTube
+      </a>
+    </div>
+
+    <!-- Últimos vídeos longos do canal (busca dinâmica via YouTube API, sem contar Shorts) -->
+    <div>
+      <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4 flex items-center gap-2">
+        <i class="ti ti-player-play text-emerald-400"></i>Últimos vídeos
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="pessoal-ultimos-videos">
+        <p class="text-slate-500 text-sm sm:col-span-3">Carregando vídeos…</p>
+      </div>
+    </div>
   </main>
 
   <script src="js/main.js"></script>
+  <script src="js/youtube.js"></script>
+  <script src="js/canal-pessoal.js"></script>
 </body>
 </html>
