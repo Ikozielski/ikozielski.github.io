@@ -35,13 +35,29 @@
     <a href="canal-pessoal.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-900 transition"><i class="ti ti-video text-emerald-400"></i>Canal Pessoal</a>
   </nav>
 
-  <main class="max-w-3xl mx-auto px-6 pb-16 space-y-6">
+  <main class="max-w-6xl mx-auto px-6 pb-16 space-y-6">
     <h1 class="text-3xl sm:text-4xl mb-2 flex items-center justify-center gap-3">
       <i class="ti ti-brand-youtube text-red-400"></i>
       <span class="titulo-pagina">IuryKzK</span>
     </h1>
-    <!-- TODO: descrição real do canal -->
-    <p class="text-slate-300 leading-relaxed">Conteúdo em construção.</p>
+    <!-- Perfil do canal: logo/nome/visualizações totais à esquerda, SubTrack à direita -->
+    <div class="flex flex-col sm:flex-row items-center gap-6 sm:justify-between">
+      <div class="flex items-center gap-4">
+        <img src="assets/fotoPerfil-canalCS.png" alt="Logo do canal IuryKzK" class="w-16 h-16 rounded-xl object-cover shrink-0" />
+        <div>
+          <h2 class="text-lg font-semibold">IuryKzK</h2>
+          <p class="text-slate-400 text-sm" id="cs2-total-views">Carregando visualizações…</p>
+        </div>
+      </div>
+
+      <div class="subtrack-container subtrack-compacta inline-flex flex-col items-center gap-1 px-5 py-3 sm:ml-auto">
+        <div class="subtrack-digits" id="contador-subtrack">000000</div>
+        <div class="subtrack-label flex items-center gap-2">
+          <span class="subtrack-dot"></span>
+          SubTrack&trade; · Inscritos no canal
+        </div>
+      </div>
+    </div>
 
     <div class="flex flex-wrap gap-3">
       <!-- TODO: trocar pelos links reais -->
@@ -53,11 +69,13 @@
       </a>
     </div>
 
-    <div class="subtrack-container inline-flex flex-col items-center gap-2 px-8 py-6">
-      <div class="subtrack-digits" id="contador-subtrack">000000</div>
-      <div class="subtrack-label flex items-center gap-2">
-        <span class="subtrack-dot"></span>
-        SubTrack&trade; · Inscritos no canal
+    <!-- Últimos vídeos longos do canal (busca dinâmica via YouTube API, sem contar Shorts) -->
+    <div>
+      <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4 flex items-center gap-2">
+        <i class="ti ti-player-play text-emerald-400"></i>Últimos vídeos
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="cs2-ultimos-videos">
+        <p class="text-slate-500 text-sm sm:col-span-3">Carregando vídeos…</p>
       </div>
     </div>
   </main>

@@ -122,3 +122,15 @@ body::after {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.35; }
 }
+
+/* Versão compacta do SubTrack, usada no topo do Canal CS2 ao lado do perfil
+   (a versão padrão, maior, fica reservada pra um destaque futuro). */
+.subtrack-compacta .subtrack-digits {
+  font-size: 28px;
+  letter-spacing: 5px;
+}
+
+.subtrack-compacta .subtrack-label {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
