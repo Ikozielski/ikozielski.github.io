@@ -1,2 +1,6 @@
 node_modules/
 .claude/settings.local.json
+
+# Video original do anuncio da QueOta.Skin (417MB, grande demais pro GitHub,
+# nao usado no site — o card final ficou so com a logo estatica)
+Front/assets/FacaAD.mov

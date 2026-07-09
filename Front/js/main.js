@@ -63,3 +63,10 @@ if (btnEmail && modalEmail) {
     }, 1500);
   });
 }
+
+// Alguns navegadores só respeitam o atributo autoplay depois que o vídeo já
+// carregou o suficiente, e às vezes isso não acontece a tempo — reforça via JS
+// pra não deixar o vídeo (tipo o do card de patrocinador) parado no primeiro frame.
+document.querySelectorAll("video[autoplay]").forEach((video) => {
+  video.play().catch(() => {});
+});
