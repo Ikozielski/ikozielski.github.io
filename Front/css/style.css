@@ -6,6 +6,11 @@
 body {
   position: relative;
   overflow-x: hidden;
+  /* isolation: isolate cria um contexto de empilhamento próprio no body, "prendendo"
+     o z-index: -1 do fundo aurora aqui dentro. Sem isso, o -1 fica relativo ao
+     contexto raiz da página e o fundo às vezes é pintado atrás de tudo (some) até
+     um reflow forçado (troca de página, refresh) recalcular o layout do zero. */
+  isolation: isolate;
 }
 
 /* Duas camadas (::before/::after) com blobs diferentes, cada uma com seu próprio
@@ -20,21 +25,23 @@ body::after {
   z-index: -1;
   pointer-events: none;
   will-change: transform;
-  /* blur suaviza a transição do gradiente pra transparente — sem isso, a borda
-     do "blob" fica com um degradê meio quebrado (banding), que parece pixelado
-     ainda mais quando o movimento é lento. */
-  filter: blur(60px);
 }
 
+/* Degradê suavizado com vários stops em vez de filter: blur(). O blur em cima de
+   position: fixed depende de uma camada de composição separada na GPU que o Chrome
+   às vezes não recria a tempo no primeiro paint — o fundo simplesmente não aparece
+   até algo forçar um novo layout (trocar de página, dar refresh). Com stops de
+   opacidade decrescendo aos poucos no próprio gradiente, o efeito "borrado" fica
+   parecido sem precisar dessa camada extra, então não depende de compositing. */
 body::before {
   background-image:
-    radial-gradient(circle at 20% 25%, rgba(16, 185, 129, 0.20), transparent 38%),
-    radial-gradient(circle at 80% 20%, rgba(255, 128, 0, 0.22), transparent 38%);
+    radial-gradient(circle at 20% 25%, rgba(16, 185, 129, 0.20) 0%, rgba(16, 185, 129, 0.12) 16%, rgba(16, 185, 129, 0.05) 28%, transparent 42%),
+    radial-gradient(circle at 80% 20%, rgba(255, 128, 0, 0.22) 0%, rgba(255, 128, 0, 0.13) 16%, rgba(255, 128, 0, 0.05) 28%, transparent 42%);
   animation: aurora-drift-1 7s ease-in-out infinite alternate;
 }
 
 body::after {
-  background-image: radial-gradient(circle at 50% 85%, rgba(124, 58, 237, 0.16), transparent 42%);
+  background-image: radial-gradient(circle at 50% 85%, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0.09) 18%, rgba(124, 58, 237, 0.04) 32%, transparent 46%);
   animation: aurora-drift-2 9s ease-in-out infinite alternate;
 }
 
