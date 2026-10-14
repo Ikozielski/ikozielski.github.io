@@ -1,0 +1,57 @@
+# Atualiza os preços do site de promoções (Front/diretogames) todo dia: roda o script
+# que lê o links.txt + os mais vendidos da Instant Gaming, comita o arquivo gerado se
+# algo mudou e publica o site de novo.
+name: Atualizar promoções
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # todo dia às 09:00 UTC (06:00 em Brasília)
+  workflow_dispatch: # botão "Run workflow" na aba Actions, pra rodar na hora
+
+permissions:
+  contents: write # pra comitar o arquivo de promoções atualizado
+  actions: write # pra disparar o deploy do Pages
+
+concurrency:
+  group: atualizar-promocoes
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Buscar preços na Instant Gaming
+        env:
+          # Chave do IsThereAnyDeal (selo MENOR HISTÓRICO). Fica em Settings > Secrets and
+          # variables > Actions. Sem ela o script roda normal, só sem o selo automático.
+          ITAD_API_KEY: ${{ secrets.ITAD_API_KEY }}
+        run: python Front/diretogames/ferramentas/atualizar-promocoes.py
+
+      - name: Comitar se mudou
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Front/diretogames/js/promocoes-instant-gaming.js
+          if git diff --cached --quiet; then
+            echo "Nada mudou."
+            echo "mudou=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Atualiza promoções da Instant Gaming"
+            git push
+            echo "mudou=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Push feito pelo GITHUB_TOKEN não dispara outros workflows (regra do GitHub, pra
+      # evitar loop), então o pages.yml não roda sozinho: dispara ele aqui.
+      - name: Publicar o site
+        if: steps.commit.outputs.mudou == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
