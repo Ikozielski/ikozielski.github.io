@@ -1,0 +1,54 @@
+# Seus DESTAQUES da Instant Gaming, um por linha. Aparecem primeiro no site, com o selo
+# DESTAQUE, nesta mesma ordem (coloque os novos no topo). Depois deles o script coloca
+# sozinho os 200 mais vendidos da Instant Gaming (ver QUANTIDADE_MAIS_VENDIDOS no script).
+#
+# Depois de editar, rode (na raiz do repositório):
+#   python Front/diretogames/ferramentas/atualizar-promocoes.py
+#
+# Pode colar o link normal do jogo: o código de afiliado (?igr=DiretoGamesBrasil)
+# é colocado pelo site. Nome, capa, preços, plataforma, se é gift card e se está
+# esgotado vêm da página da Instant Gaming.
+#
+# Opções extras (opcionais), depois do link, separadas por "|":
+#   menor historico      mostra o selo MENOR HISTÓRICO
+#   ate 2026-10-31       some do site depois dessa data
+#   cupom CODIGO         mostra o cupom no card
+#   esgotado             força o selo ESGOTADO
+#
+# Exemplo:
+# https://www.instant-gaming.com/pt/12451-comprar-sea-of-stars-pc-jogo-steam/ | menor historico | ate 2026-10-31
+
+https://www.instant-gaming.com/en/22524-buy-star-wars-galactic-racer-pc-steam/
+https://www.instant-gaming.com/en/9093-buy-ghost-of-tsushima-director-s-cut-pc-steam/?itm_source=home_page&itm_medium=product_recommended
+https://www.instant-gaming.com/en/19535-buy-forza-horizon-6-xbox-series-x-s-pc-microsoft-store/?itm_source=home_page&itm_medium=product_recommended
+https://www.instant-gaming.com/en/442-buy-minecraft-java-and-bedrock-edition-pc/
+https://www.instant-gaming.com/en/22952-buy-roblox-1000-robux-pc/
+https://www.instant-gaming.com/en/4211-buy-grand-theft-auto-v-enhanced-pc-rockstar/
+https://www.instant-gaming.com/en/1263-buy-assetto-corsa-pc-steam/
+https://www.instant-gaming.com/en/15005-buy-ea-sports-fc-24-12000-fc-points-12000-fc-pc-game-ea-app/
+https://www.instant-gaming.com/en/16809-buy-call-of-duty-modern-warfare-4-xbox-series-x-s-pc-microsoft-store/
+https://www.instant-gaming.com/en/13464-buy-playstation-store-gift-card-60-brl-r-60-card-playstation-5-playstation-4-game-playstation-store-brazil/
+https://www.instant-gaming.com/en/13529-buy-nintendo-eshop-card-50-brl-r-50-card-switch-switch-2-game-nintendo-eshop-brazil/
+https://www.instant-gaming.com/en/24265-buy-planet-zoo-2-deluxe-edition-pc-steam/
+https://www.instant-gaming.com/en/16888-buy-permafrost-pc-steam/
+https://www.instant-gaming.com/en/18828-buy-minecraft-dungeons-ii-pc-xbox-series-x-s-microsoft-store/
+https://www.instant-gaming.com/pt/1839-comprar-system-shock-pc-steam/
+https://www.instant-gaming.com/pt/4520-comprar-sniper-elite-v2-remastered-remastered-pc-jogo-steam/
+https://www.instant-gaming.com/pt/14845-comprar-blasphemous-2-pc-jogo-steam-latin-america/
+https://www.instant-gaming.com/pt/2159-comprar-scum-pc-steam/
+https://www.instant-gaming.com/pt/18924-comprar-the-first-berserker-khazan-pc-jogo-steam-latin-america/
+https://www.instant-gaming.com/pt/19798-comprar-hell-clock-pc-steam/
+https://www.instant-gaming.com/pt/19346-comprar-copycat-pc-mac-steam/
+https://www.instant-gaming.com/pt/23078-comprar-dragon-s-dogma-2-dark-arisen-pc-steam/
+https://www.instant-gaming.com/pt/23786-comprar-control-resonant-pc-steam/
+https://www.instant-gaming.com/pt/22881-comprar-onimusha-way-of-the-sword-pc-steam/
+https://www.instant-gaming.com/pt/12144-comprar-minecraft-legends-xbox-one-xbox-series-x-s-xbox-series-x-s-xbox-one-jogo-microsoft-store/
+https://www.instant-gaming.com/pt/24111-comprar-world-war-z-xbox-one-xbox-series-x-s-microsoft-store/
+https://www.instant-gaming.com/pt/19807-comprar-mafia-the-old-country-xbox-series-x-s-microsoft-store/
+https://www.instant-gaming.com/pt/19789-comprar-the-outer-worlds-2-premium-edition-pc-xbox-series-x-s-microsoft-store/
+https://www.instant-gaming.com/pt/22994-comprar-fable-premium-edition-xbox-series-x-s-pc-microsoft-store/
+https://www.instant-gaming.com/pt/22468-comprar-xbox-game-pass-ultimate-3-months-pc-xbox-one-xbox-series-x-s-microsoft-store/
+https://www.instant-gaming.com/pt/23440-comprar-xbox-game-pass-premium-3-month-pc-xbox-series-x-s-microsoft-store/
+https://www.instant-gaming.com/pt/15004-comprar-ea-sports-fc-24-5900-fc-points-5900-fc-pc-jogo-ea-app/
+https://www.instant-gaming.com/pt/13465-comprar-vale-presente-da-playstation-store-150-brl-r-150-card-playstation-5-playstation-4-jogo-playstation-store-brasil/
+https://www.instant-gaming.com/pt/13530-comprar-nintendo-eshop-card-100-brl-r-100-card-switch-switch-2-jogo-nintendo-eshop-brasil/

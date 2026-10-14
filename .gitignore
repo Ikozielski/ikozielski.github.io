@@ -4,3 +4,10 @@ node_modules/
 # Video original do anuncio da QueOta.Skin (417MB, grande demais pro GitHub,
 # nao usado no site — o card final ficou so com a logo estatica)
 Front/assets/FacaAD.mov
+
+# Chaves de API locais (ex: ITAD_API_KEY do script de promoções). Nunca comitar:
+# no GitHub Actions a chave vem dos Secrets do repositório.
+.env
+
+# Cache do Python (gerado ao rodar os scripts)
+__pycache__/

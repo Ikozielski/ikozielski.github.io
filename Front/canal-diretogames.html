@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Direto Games Brasil · Iury Kozielski</title>
+  <link rel="icon" type="image/png" href="assets/fotoPerfil-canalCS-semfundo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
+  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <a href="index.html" class="flex items-center">
+      <img src="assets/fotoPerfil-canalCS.png" alt="Iury Kozielski" class="w-12 h-12 rounded-md object-contain" />
+    </a>
+    <nav class="hidden md:flex gap-8 text-base text-slate-300">
+      <a href="index.html" class="flex items-center gap-2 hover:text-white transition"><i class="ti ti-home text-emerald-400"></i>Início</a>
+      <a href="projetos.html" class="flex items-center gap-2 hover:text-white transition"><i class="ti ti-device-gamepad-2 text-emerald-400"></i>Projetos</a>
+      <a href="canal-cs2.html" class="flex items-center gap-2 hover:text-white transition"><i class="ti ti-video text-emerald-400"></i>Canal CS2</a>
+      <a href="canal-pessoal.html" class="flex items-center gap-2 hover:text-white transition"><i class="ti ti-video text-emerald-400"></i>Canal Pessoal</a>
+      <a href="canal-diretogames.html" class="flex items-center gap-2 text-white"><i class="ti ti-video text-emerald-400"></i>Direto Games Brasil</a>
+    </nav>
+    <button type="button" id="btn-menu-mobile" class="md:hidden w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition" title="Menu" aria-label="Abrir menu" aria-expanded="false">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </header>
+
+  <!-- Menu mobile: vira dropdown abaixo do header quando a nav horizontal some (< md) -->
+  <nav id="menu-mobile" class="hidden md:hidden max-w-6xl mx-auto px-6 pb-4 flex flex-col gap-1 text-sm text-slate-300">
+    <a href="index.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-900 transition"><i class="ti ti-home text-emerald-400"></i>Início</a>
+    <a href="projetos.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-900 transition"><i class="ti ti-device-gamepad-2 text-emerald-400"></i>Projetos</a>
+    <a href="canal-cs2.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-900 transition"><i class="ti ti-video text-emerald-400"></i>Canal CS2</a>
+    <a href="canal-pessoal.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-900 transition"><i class="ti ti-video text-emerald-400"></i>Canal Pessoal</a>
+    <a href="canal-diretogames.html" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-900 text-white transition"><i class="ti ti-video text-emerald-400"></i>Direto Games Brasil</a>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 pb-16 space-y-6">
+    <h1 class="text-3xl sm:text-4xl mb-2 flex items-center justify-center gap-3">
+      <i class="ti ti-brand-youtube text-red-400"></i>
+      <span class="titulo-pagina">Direto Games Brasil</span>
+    </h1>
+
+    <!-- Perfil do canal: logo/nome/inscritos/visualizações totais -->
+    <div class="flex items-center gap-4">
+      <img src="assets/logo-diretogames.png" alt="Logo do canal Direto Games Brasil" class="w-16 h-16 rounded-xl object-cover shrink-0" />
+      <div>
+        <h2 class="text-lg font-semibold">Direto Games Brasil</h2>
+        <p class="text-slate-400 text-sm" id="diretogames-inscritos">Carregando inscritos…</p>
+        <p class="text-slate-400 text-sm" id="diretogames-total-views">Carregando visualizações…</p>
+      </div>
+    </div>
+
+    <p class="text-slate-300 text-sm">Tutoriais, dicas e promoções pra você jogar melhor e gastar menos.</p>
+
+    <div class="flex flex-wrap gap-3">
+      <a href="https://www.youtube.com/channel/UCLIf-PzzZJUU7PaUxN8LxxQ?sub_confirmation=1" target="_blank" rel="noopener" class="px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/30 hover:bg-red-500/20 transition inline-flex items-center gap-2">
+        <i class="ti ti-brand-youtube"></i> Inscrever-se no YouTube
+      </a>
+    </div>
+
+    <!-- Promoções ficam num site próprio do canal (pasta diretogames/), aqui só o atalho -->
+    <a href="diretogames/" class="block rounded-2xl border border-yellow-400/30 bg-yellow-400/5 hover:bg-yellow-400/10 p-6 transition">
+      <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+        <i class="ti ti-discount-2 text-4xl text-yellow-400"></i>
+        <div class="flex-1">
+          <h2 class="font-semibold text-lg">Promoções de jogos</h2>
+          <p class="text-sm text-slate-300">As ofertas que eu divulgo no canal, reunidas num site só: Instant Gaming, Steam, Epic, GOG e mais.</p>
+        </div>
+        <span class="px-4 py-2 rounded-full bg-yellow-400 text-slate-950 text-sm font-semibold inline-flex items-center gap-2">
+          Ver promoções <i class="ti ti-arrow-right"></i>
+        </span>
+      </div>
+    </a>
+
+    <!-- Últimos vídeos longos do canal (busca dinâmica via YouTube API, sem contar Shorts) -->
+    <div>
+      <h2 class="text-sm uppercase tracking-wide text-slate-400 mb-4 flex items-center gap-2">
+        <i class="ti ti-player-play text-emerald-400"></i>Últimos vídeos
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="diretogames-ultimos-videos">
+        <p class="text-slate-500 text-sm sm:col-span-3">Carregando vídeos…</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/youtube.js"></script>
+  <script src="js/canal-diretogames.js"></script>
+</body>
+</html>
