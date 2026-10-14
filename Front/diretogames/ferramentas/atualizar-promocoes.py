@@ -75,6 +75,10 @@ CABECALHOS = {
 def baixar_pagina(url):
     """Devolve (html, url_final). A url final importa porque a Instant Gaming
     redireciona /pt/123-buy-... pro slug em português (/pt/123-comprar-...)."""
+    # A Instant Gaming escolhe a moeda pelo país de quem acessa: no GitHub Actions (EUA)
+    # viria em dólar. "?currency=BRL" é o mesmo seletor de moeda do site deles e força real.
+    # (O link salvo no card sai sem esse parâmetro: ver link_final.split("?") abaixo.)
+    url = f"{url}{'&' if '?' in url else '?'}currency=BRL"
     requisicao = urllib.request.Request(url, headers=CABECALHOS)
     with urllib.request.urlopen(requisicao, timeout=20) as resposta:
         return resposta.read().decode("utf-8", errors="ignore"), resposta.geturl()
