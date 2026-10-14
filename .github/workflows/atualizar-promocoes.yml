@@ -7,6 +7,8 @@ on:
   schedule:
     - cron: "0 9 * * *" # todo dia às 09:00 UTC (06:00 em Brasília)
   workflow_dispatch: # botão "Run workflow" na aba Actions, pra rodar na hora
+  push: # TEMPORÁRIO: só pra testar no branch antes do merge — remover antes de mergear
+    branches: [site-diretogames]
 
 permissions:
   contents: write # pra comitar o arquivo de promoções atualizado
@@ -51,7 +53,8 @@ jobs:
       # Push feito pelo GITHUB_TOKEN não dispara outros workflows (regra do GitHub, pra
       # evitar loop), então o pages.yml não roda sozinho: dispara ele aqui.
       - name: Publicar o site
-        if: steps.commit.outputs.mudou == 'true'
+        # Só publica a partir da main (o Pages publica a main; rodar em outro branch é teste)
+        if: steps.commit.outputs.mudou == 'true' && github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run pages.yml --ref main
