@@ -7,8 +7,6 @@ on:
   schedule:
     - cron: "0 9 * * *" # todo dia às 09:00 UTC (06:00 em Brasília)
   workflow_dispatch: # botão "Run workflow" na aba Actions, pra rodar na hora
-  push: # TEMPORÁRIO: só pra testar no branch antes do merge — remover antes de mergear
-    branches: [site-diretogames]
 
 permissions:
   contents: write # pra comitar o arquivo de promoções atualizado
