@@ -29,7 +29,6 @@ const PROMOCOES_INSTANT_GAMING = [
     "precoPromo": 170.49,
     "imagem": "https://gaming-cdn.com/images/products/9093/616x353/ghost-of-tsushima-director-s-cut-pc-steam-cover.jpg?v=1759906859",
     "link": "https://www.instant-gaming.com/pt/9093-comprar-ghost-of-tsushima-director-s-cut-pc-steam/",
-    "esgotado": true,
     "destaque": true
   },
   {
@@ -734,6 +733,20 @@ const PROMOCOES_INSTANT_GAMING = [
     "precoPromo": 19.58,
     "imagem": "https://gaming-cdn.com/images/products/6839/616x353/wallpaper-engine-pc-jogo-steam-cover.jpg?v=1717579966",
     "link": "https://www.instant-gaming.com/pt/6839-comprar-wallpaper-engine-pc-jogo-steam/"
+  },
+  {
+    "jogo": "V Rising",
+    "plataforma": "Steam",
+    "categorias": [
+      "PC"
+    ],
+    "tipo": "jogo",
+    "loja": "Instant Gaming",
+    "precoOriginal": 102.0,
+    "precoPromo": 26.31,
+    "imagem": "https://gaming-cdn.com/images/products/11030/616x353/v-rising-pc-steam-cover.jpg?v=1772463557",
+    "link": "https://www.instant-gaming.com/pt/11030-comprar-v-rising-pc-steam/",
+    "menorHistorico": true
   },
   {
     "jogo": "EA Sports FC 27",
@@ -1528,6 +1541,19 @@ const PROMOCOES_INSTANT_GAMING = [
     "link": "https://www.instant-gaming.com/pt/6791-comprar-days-gone-pc-jogo-steam/"
   },
   {
+    "jogo": "Pack de 200.000 em Moeda Virtual para a NBA 2K27",
+    "plataforma": "Xbox",
+    "categorias": [
+      "Xbox"
+    ],
+    "tipo": "giftcard",
+    "loja": "Instant Gaming",
+    "precoOriginal": 280.0,
+    "precoPromo": 221.54,
+    "imagem": "https://gaming-cdn.com/images/products/23805/616x353/pack-de-200-000-em-moeda-virtual-para-a-nba-2k27-xbox-series-x-s-microsoft-store-cover.jpg?v=1788363102",
+    "link": "https://www.instant-gaming.com/pt/23805-comprar-pack-de-200-000-em-moeda-virtual-para-a-nba-2k27-xbox-series-x-s-microsoft-store/"
+  },
+  {
     "jogo": "The Sims 4 Cats & Dogs",
     "plataforma": "EA App",
     "categorias": [
@@ -1753,6 +1779,19 @@ const PROMOCOES_INSTANT_GAMING = [
     "imagem": "https://gaming-cdn.com/images/products/2757/616x353/injustice-2-legendary-edition-legendary-edition-pc-jogo-steam-cover.jpg?v=1703171595",
     "link": "https://www.instant-gaming.com/pt/2757-comprar-injustice-2-legendary-edition-legendary-edition-pc-jogo-steam/",
     "menorHistorico": true
+  },
+  {
+    "jogo": "Pack de 450.000 em Moeda Virtual para a NBA 2K27",
+    "plataforma": "Xbox",
+    "categorias": [
+      "Xbox"
+    ],
+    "tipo": "giftcard",
+    "loja": "Instant Gaming",
+    "precoOriginal": 561.0,
+    "precoPromo": 434.72,
+    "imagem": "https://gaming-cdn.com/images/products/23807/616x353/pack-de-450-000-em-moeda-virtual-para-a-nba-2k27-xbox-series-x-s-microsoft-store-cover.jpg?v=1788363111",
+    "link": "https://www.instant-gaming.com/pt/23807-comprar-pack-de-450-000-em-moeda-virtual-para-a-nba-2k27-xbox-series-x-s-microsoft-store/"
   },
   {
     "jogo": "Streets of Rage 4",
@@ -2241,6 +2280,19 @@ const PROMOCOES_INSTANT_GAMING = [
     "precoPromo": 66.7,
     "imagem": "https://gaming-cdn.com/images/products/4624/616x353/the-sims-4-island-living-pc-mac-jogo-ea-app-cover.jpg?v=1716979481",
     "link": "https://www.instant-gaming.com/pt/4624-comprar-the-sims-4-island-living-pc-mac-jogo-ea-app/"
+  },
+  {
+    "jogo": "Zero Hour",
+    "plataforma": "Steam",
+    "categorias": [
+      "PC"
+    ],
+    "tipo": "jogo",
+    "loja": "Instant Gaming",
+    "precoOriginal": 33.0,
+    "precoPromo": 5.55,
+    "imagem": "https://gaming-cdn.com/images/products/17187/616x353/zero-hour-pc-steam-cover.jpg?v=1767100017",
+    "link": "https://www.instant-gaming.com/pt/17187-comprar-zero-hour-pc-steam/"
   },
   {
     "jogo": "The Elder Scrolls V: Skyrim Anniversary Upgrade",
@@ -2848,6 +2900,19 @@ const PROMOCOES_INSTANT_GAMING = [
     "menorHistorico": true
   },
   {
+    "jogo": "Metro Exodus Gold Edition",
+    "plataforma": "Steam",
+    "categorias": [
+      "PC"
+    ],
+    "tipo": "jogo",
+    "loja": "Instant Gaming",
+    "precoOriginal": 199.0,
+    "precoPromo": 29.68,
+    "imagem": "https://gaming-cdn.com/images/products/6512/616x353/metro-exodus-gold-edition-pc-steam-cover.jpg?v=1770038060",
+    "link": "https://www.instant-gaming.com/pt/6512-comprar-metro-exodus-gold-edition-pc-steam/"
+  },
+  {
     "jogo": "Resonance: A Plague Tale Legacy",
     "plataforma": "Steam",
     "categorias": [
@@ -3069,73 +3134,5 @@ const PROMOCOES_INSTANT_GAMING = [
     "precoPromo": 21.82,
     "imagem": "https://gaming-cdn.com/images/products/1251/616x353/quantum-break-pc-jogo-steam-cover.jpg?v=1703241942",
     "link": "https://www.instant-gaming.com/pt/1251-comprar-quantum-break-pc-jogo-steam/"
-  },
-  {
-    "jogo": "Call of the Wild: The Angler",
-    "plataforma": "Steam",
-    "categorias": [
-      "PC"
-    ],
-    "tipo": "jogo",
-    "loja": "Instant Gaming",
-    "precoOriginal": 89.0,
-    "precoPromo": 21.26,
-    "imagem": "https://gaming-cdn.com/images/products/12658/616x353/call-of-the-wild-the-angler-pc-jogo-steam-cover.jpg?v=1721719146",
-    "link": "https://www.instant-gaming.com/pt/12658-comprar-call-of-the-wild-the-angler-pc-jogo-steam/"
-  },
-  {
-    "jogo": "Rain World",
-    "plataforma": "Steam",
-    "categorias": [
-      "PC"
-    ],
-    "tipo": "jogo",
-    "loja": "Instant Gaming",
-    "precoOriginal": 74.0,
-    "precoPromo": 11.72,
-    "imagem": "https://gaming-cdn.com/images/products/7716/616x353/rain-world-pc-steam-cover.jpg?v=1764684526",
-    "link": "https://www.instant-gaming.com/pt/7716-comprar-rain-world-pc-steam/"
-  },
-  {
-    "jogo": "Thronebreaker: The Witcher Tales",
-    "plataforma": "Steam",
-    "categorias": [
-      "PC"
-    ],
-    "tipo": "jogo",
-    "loja": "Instant Gaming",
-    "precoOriginal": 112.0,
-    "precoPromo": 6.11,
-    "imagem": "https://gaming-cdn.com/images/products/6316/616x353/thronebreaker-the-witcher-tales-pc-jogo-steam-cover.jpg?v=1650550306",
-    "link": "https://www.instant-gaming.com/pt/6316-comprar-thronebreaker-the-witcher-tales-pc-jogo-steam/",
-    "menorHistorico": true
-  },
-  {
-    "jogo": "Forza Horizon 5",
-    "plataforma": "Microsoft Store",
-    "categorias": [
-      "PC",
-      "Xbox"
-    ],
-    "tipo": "jogo",
-    "loja": "Instant Gaming",
-    "precoOriginal": 393.0,
-    "precoPromo": 151.41,
-    "imagem": "https://gaming-cdn.com/images/products/8701/616x353/forza-horizon-5-pc-xbox-one-xbox-series-x-s-jogo-microsoft-store-cover.jpg?v=1738767995",
-    "link": "https://www.instant-gaming.com/pt/8701-comprar-forza-horizon-5-pc-xbox-one-xbox-series-x-s-jogo-microsoft-store/"
-  },
-  {
-    "jogo": "Beholder: Conductor",
-    "plataforma": "Steam",
-    "categorias": [
-      "PC"
-    ],
-    "tipo": "jogo",
-    "loja": "Instant Gaming",
-    "precoOriginal": 77.0,
-    "precoPromo": 9.48,
-    "imagem": "https://gaming-cdn.com/images/products/19171/616x353/beholder-conductor-pc-mac-jogo-steam-cover.jpg?v=1745478650",
-    "link": "https://www.instant-gaming.com/pt/19171-comprar-beholder-conductor-pc-mac-jogo-steam/",
-    "menorHistorico": true
   }
 ];
